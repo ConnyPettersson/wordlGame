@@ -1,0 +1,18 @@
+{
+  "name": "wordlgame",
+  "version": "1.0.0",
+  "description": "Assignment to make a Wordl game",
+  "main": "wordl.js",
+  "type": "module",
+  "scripts": {
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --collect-coverage",
+    "test:watch": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0"
+  }
+}
