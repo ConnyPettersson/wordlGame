@@ -1,18 +1,17 @@
 import { describe, expect, it } from '@jest/globals';
-
 import input from './wordl.js';
 
 describe('Feedback för Wordle-algoritm', () => {
   it('ska returnera "correct", "incorrect" eller "misplaced" för alla bokstäver', () => {
-    const correctWord = 'CYKLA'; 
-    const guess = 'HALLÅ';
+    const correctWord = 'TRAMP'; 
+    const guess = 'KLAMP';
     const feedback = input(guess, correctWord);
     //Testar att alla bokstäver har rätt plats eller inte och att överblivna dubbletter får 'incorrect' 
-    expect(feedback[0]).toEqual({ letter: 'h', result: 'incorrect' }); 
-    expect(feedback[1]).toEqual({ letter: 'a', result: 'misplaced' }); 
-    expect(feedback[2]).toEqual({ letter: 'l', result: 'incorrect' }); 
-    expect(feedback[3]).toEqual({ letter: 'l', result: 'correct' }); 
-    expect(feedback[4]).toEqual({ letter: 'å', result: 'incorrect' }); 
+    expect(feedback[0]).toEqual({ letter: 'k', result: 'incorrect' }); 
+    expect(feedback[1]).toEqual({ letter: 'l', result: 'incorrect' }); 
+    expect(feedback[2]).toEqual({ letter: 'a', result: 'correct' }); 
+    expect(feedback[3]).toEqual({ letter: 'm', result: 'correct' }); 
+    expect(feedback[4]).toEqual({ letter: 'p', result: 'correct' }); 
   });
 
   it('ska returnera "incorrect" för alla bokstäver som inte finns i det korrekta ordet', () => {
